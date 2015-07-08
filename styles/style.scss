@@ -1,5 +1,5 @@
-@import 'bower_components/fontawesome/css/font-awesome.css';
-@import 'bower_components/reset-css/reset.css';
+@import '/fontawesome/css/font-awesome.css';
+@import '/reset-css/reset.css';
 
 $primary-color: #5CB1E9;
 $alt-color: #2F80BF;
@@ -13,11 +13,21 @@ html {
 }
 
 .timeline {
-    border-left: 4px solid darken($alt-color, 20%);
+    border-left: 7px solid lighten($primary-color, 20%);
     margin-left: 20%;
+    margin-top: 2%;
+}
+.left {
+    position: absolute;
+    top: 28px;
+    left: 126px;
+}
+.timestamp {
+    text-align: right;
 }
 .timestamp p:first-of-type {
     color: gray;
+    font-size: 0.8em;
 }
 .timestamp p:last-of-type {
     color: $primary-color;
@@ -26,6 +36,19 @@ html {
 .icon {
     border-radius: 50%;
     background: $alt-color;
+    border: 7px solid lighten($primary-color, 20%);
+    position: absolute;
+    top: 0;
+    right: -65px;
+    width: 40px;
+    height: 40px;
+}
+.icon span {
+    color: white;
+    font-size: 1.2em;
+    position: relative;
+    top: 17%;
+    left: 36%;
 }
 .post {
     background: $primary-color;
@@ -33,11 +56,13 @@ html {
     background: $primary-color;
     border-radius: 3px;
     color: white;
-    padding: 1px 20px;
+    padding: 20px 20px;
+    max-width: 60%;
+    margin-left: 5%;
 }
 .post:after {
     right: 100%;
-    top: 12%;
+    top: 6%;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -48,7 +73,11 @@ html {
     border-width: 8px;
     margin-top: -8px;
 }
+.title h3, .entry p {
+    margin: 20px;
+}
 .title {
+    margin-top: 0;
     font-size: 2em;
     border-bottom: 1px solid white;
 }
