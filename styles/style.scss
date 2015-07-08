@@ -1,18 +1,27 @@
+@import 'bower_components/fontawesome/css/font-awesome.css';
+@import 'bower_components/reset-css/reset.css';
+
+$primary-color: #5CB1E9;
+$alt-color: #2F80BF;
+
 html {
   box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
- @import '/bower_components/fontawesome/css/font-awesome.css';
- @import '/bower_components/reset-css/reset.css';
-
- $primary-color: #5CB1E9;
- $alt-color: #2F80BF;
 
 .timeline {
     border-left: 4px solid darken($alt-color, 20%);
     margin-left: 20%;
+}
+.timestamp p:first-of-type {
+    color: gray;
+}
+.timestamp p:last-of-type {
+    color: $primary-color;
+    font-size: 3em;
 }
 .icon {
     border-radius: 50%;
@@ -20,4 +29,26 @@ html {
 }
 .post {
     background: $primary-color;
+    position: relative;
+    background: $primary-color;
+    border-radius: 3px;
+    color: white;
+    padding: 1px 20px;
+}
+.post:after {
+    right: 100%;
+    top: 12%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: $primary-color;
+    border-width: 8px;
+    margin-top: -8px;
+}
+.title {
+    font-size: 2em;
+    border-bottom: 1px solid white;
 }
