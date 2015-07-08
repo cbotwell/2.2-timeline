@@ -4,8 +4,20 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
- @import url(/bower_components/fontawesome/css/font-awesome.css);
- @import url(/bower_components/reset-css/reset.css);
+ @import '/bower_components/fontawesome/css/font-awesome.css';
+ @import '/bower_components/reset-css/reset.css';
 
  $primary-color: #5CB1E9;
  $alt-color: #2F80BF;
+
+.timeline {
+    border-left: 4px solid darken($alt-color, 20%);
+    margin-left: 20%;
+}
+.icon {
+    border-radius: 50%;
+    background: $alt-color;
+}
+.post {
+    background: $primary-color;
+}
