@@ -14,13 +14,16 @@ html {
 
 .timeline {
     border-left: 7px solid lighten($primary-color, 20%);
-    margin-left: 20%;
-    margin-top: 2%;
+    margin: 2% 0 2% 20%;
+}
+.event {
+    position: relative;
+    margin-top: 5%;
 }
 .left {
     position: absolute;
-    top: 28px;
-    left: 126px;
+    top: -1px;
+    left: -169px;
 }
 .timestamp {
     text-align: right;
