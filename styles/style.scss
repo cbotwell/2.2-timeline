@@ -11,10 +11,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+.wrapper {
+    width: 65%;
+    margin: auto;
+}
 .timeline {
     border-left: 7px solid lighten($primary-color, 20%);
-    margin: 2% 0 2% 20%;
+    margin: 2% 0 2% 15%;
 }
 .event {
     position: relative;
@@ -50,22 +53,21 @@ html {
     color: white;
     font-size: 1.2em;
     position: relative;
-    top: 17%;
-    left: 36%;
+    top: 14%;
+    left: 33%;
 }
 .post {
     background: $primary-color;
     position: relative;
     background: $primary-color;
-    border-radius: 3px;
+    border-radius: 5px;
     color: white;
-    padding: 20px 20px;
-    max-width: 60%;
+    padding: 20px 50px;
     margin-left: 5%;
 }
 .post:after {
     right: 100%;
-    top: 6%;
+    top: 5%;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -77,10 +79,14 @@ html {
     margin-top: -8px;
 }
 .title h3, .entry p {
-    margin: 20px;
+    margin: 20px 0;
 }
 .title {
     margin-top: 0;
     font-size: 2em;
+    font-weight: bold;
     border-bottom: 1px solid white;
+}
+.entry {
+    line-height: 1.5;
 }
