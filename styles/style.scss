@@ -1,6 +1,149 @@
+@import 'fontawesome/css/font-awesome.css';
+@import 'reset-css/reset.css';
+
+$primary-color: #5CB1E9;
+$alt-color: #2F80BF;
+
 html {
   box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
+.wrapper {
+    width: 65%;
+    margin: auto;
+}
+.timeline {
+    border-left: 7px solid lighten($primary-color, 20%);
+    margin: 2% 0 2% 15%;
+}
+.event {
+    position: relative;
+    margin-top: 5%;
+
+    // Left
+    .left {
+        position: absolute;
+        top: -1px;
+        left: -169px;
+    }
+
+    // Timestamp
+
+    .timestamp {
+        text-align: right;
+    }
+    .timestamp p:first-of-type {
+        color: #B1C4D1;
+        font-size: 0.8em;
+    }
+    .timestamp p:last-of-type {
+        color: $primary-color;
+        font-size: 3em;
+    }
+
+    // Icon
+
+    .icon {
+        border-radius: 50%;
+        background: $alt-color;
+        border: 7px solid lighten($primary-color, 20%);
+        position: absolute;
+        top: 0;
+        right: -65px;
+        width: 40px;
+        height: 40px;
+    }
+    .icon span {
+        color: white;
+        font-size: 1.2em;
+        position: relative;
+        top: 14%;
+        left: 33%;
+    }
+
+    // Post Box
+
+    .post {
+        background: $primary-color;
+        position: relative;
+        border-radius: 5px;
+        color: white;
+        padding: 20px 50px;
+        margin-left: 5%;
+    }
+    .post:after {
+        right: 100%;
+        top: 5%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-right-color: $primary-color;
+        border-width: 8px;
+        margin-top: -8px;
+    }
+    .title, .entry {
+        margin: 20px 0;
+    }
+    .title {
+        margin-top: 0;
+        font-size: 2em;
+        font-weight: bold;
+        border-bottom: 1px solid white;
+        padding: 20px 0;
+    }
+    .entry {
+        line-height: 1.5;
+    }
+}
+// Changing Colors For Odd Posts
+
+.event:nth-child(even) {
+    .post {
+        background: $alt-color;
+    }
+    .post:after {
+        border-right-color: $alt-color;
+    }
+    .timestamp p:last-of-type {
+        color: $alt-color;
+    }
+}
+
+// @media (max-width: 1024) {
+//     .wrapper {
+//         width: 80%;
+//     }
+// }
+
+// @media (max-width: 480) {
+//     .wrapper {
+//     width: 74%;
+//     }
+//     .timeline {
+//     margin: 2% 0 2% 10%;
+//     }
+//     .event {
+//         margin-left: 5%;
+//     }
+//     .timestamp p:last-of-type {
+//         font-size: 1em;
+//         text-align: center;
+//     }
+//     .left {
+//         top: 2px;
+//         left: -95px;
+//     }
+//     .icon {
+//         top: -3px;
+//         right: -56px;
+//     }
+//     .post:after {
+//         top: 2%;
+//     }
+// }
