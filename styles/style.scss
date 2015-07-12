@@ -87,7 +87,7 @@ html {
         border-width: 8px;
         margin-top: -8px;
     }
-    .title h3, .entry p {
+    .title, .entry {
         margin: 20px 0;
     }
     .title {
@@ -95,6 +95,7 @@ html {
         font-size: 2em;
         font-weight: bold;
         border-bottom: 1px solid white;
+        padding: 20px 0;
     }
     .entry {
         line-height: 1.5;
